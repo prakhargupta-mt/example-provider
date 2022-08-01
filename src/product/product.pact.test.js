@@ -21,7 +21,7 @@ describe("Pact Verification", () => {
     }
 
     // For builds triggered by a 'contract content changed' webhook,
-    // just verify the changed pact. The URL will bave been passed in
+    // just verify the changed pact. The URL will have been passed in
     // from the webhook to the CI job.
     const pactChangedOpts = {
       pactUrls: [process.env.PACT_URL]
@@ -40,17 +40,17 @@ describe("Pact Verification", () => {
     const stateHandlers = {
       "products exists": () => {
         controller.repository.products = new Map([
-          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1")]
+          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1", 30.0)]
         ]);
       },
       "products exist": () => {
         controller.repository.products = new Map([
-          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1")]
+          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1", 30.0)]
         ]);
       },
       "a product with ID 10 exists": () => {
         controller.repository.products = new Map([
-          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1")]
+          ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1", 30.0)]
         ]);
       },
       "a product with ID 11 does not exist": () => {
