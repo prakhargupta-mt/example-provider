@@ -11,9 +11,9 @@ class ProductRepository {
 
         // New field introduced Price
         this.products = new Map([
-            ["09", new Product("09", "CREDIT_CARD", "Gem Visa", "v1", 30.0)],
-            ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1", 25.3)],
-            ["11", new Product("11", "PERSONAL_LOAN", "MyFlexiPay", "v2", 51.2)],
+            ["09", new Product("09", "CREDIT_CARD", "Gem Visa", "v1", 30.0, "red")],
+            ["10", new Product("10", "CREDIT_CARD", "28 Degrees", "v1", 25.3, "red")],
+            ["11", new Product("11", "PERSONAL_LOAN", "MyFlexiPay", "v2", 51.2, "red")],
         ]);
     }
 
